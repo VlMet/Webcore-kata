@@ -1,0 +1,31 @@
+/*--коcтыли--*/
+.slide-menu,
+.info-block__text {
+  padding-left: 16px;
+}
+.row-with-buttons {
+  display: flex;
+  padding-right: 32px;
+}
+.row-with-buttons span {
+  font-weight: 500;
+  align-self: center;
+  margin-right: 8px;
+}
+.row-with-buttons span, .row-with-buttons button {
+  display: none;
+}
+.title__checkstatus {
+  background-image: url("../images/checkstatus.svg");
+}
+.title__repair {
+  background-image: url("../images/repair.svg");
+}
+.title + span {
+  margin-left: auto;
+}
+@media screen and (max-width: 767px) {
+.line-right::after {
+    left: 150px;
+  }
+}

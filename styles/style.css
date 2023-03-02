@@ -1,0 +1,238 @@
+@import url("default.css");
+@import url("presset.css");
+@import url("fonts.css");
+@import url("debug.css");
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 88px;
+  padding: 16px 24px;
+  width: 100%;
+  border-bottom: 1px solid #d9fff5;
+}
+
+.header__burger {
+  background-image: url("../images/burger.svg");
+}
+.header__checkstatus {
+  background-image: url("../images/checkstatus.svg");
+}
+.header__repair {
+  background-image: url("../images/repair.svg");
+  margin-left: auto;
+}
+.header__profile {
+  background-image: url("../images/profile.svg");
+  display: none;
+}
+.header__chat {
+  background-image: url("../images/chat.svg");
+  display: none;
+}
+.header__call {
+  background-image: url("../images/call.svg");
+  margin-left: auto;
+  display: none;
+}
+
+/*-----------------*/
+.start-block {
+  padding-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title::before {
+  content: "";
+  border-right: 4px solid #41f6d7;
+  border-radius: 0 4px 4px 0px;
+  margin-right: 12px;
+}
+.title {
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6px;
+}
+
+.slide-menu {
+  list-style-type: none;
+  display: flex;
+  letter-spacing: -0.2px;
+  overflow: scroll;
+  /*overflow-x: scroll;*/
+}
+
+.slide-menu__item {
+  flex-shrink: 0;
+}
+
+.slide-menu__item button {
+  color: #7e7e82;
+  display: block;
+  padding: 8px 12px;
+  max-height: 40px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.slide-menu__item--selected {
+  border: 2px solid #b8ffec;
+  border-radius: 6px;
+}
+/*--INFO_BLOCK--*/
+.info-block {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+}
+.info-block__text p {
+  width: 288px;
+  height: 90px;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  overflow: hidden;
+}
+
+.info-block__link {
+  font-weight: 500;
+  margin: 16px 0;
+  letter-spacing: -0.2px;
+}
+
+.info-block__link::before {
+  content: "";
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  background-image: url("../images/expand.svg");
+  vertical-align: middle;
+}
+
+@media screen and (min-width: 768px) {
+  .header__profile,
+  .header__chat,
+  .header__call {
+    display: block;
+  }
+
+  .info-block {
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  .info-block__text p {
+    width: 312px;
+    height: 160px;
+  }
+
+  .info-block__image {
+    width: 360px;
+  }
+
+  .info-block__image img {
+    border-radius: 6px;
+  }
+
+  .slide-menu__item:nth-child(4) {
+    order: 1;
+  }
+  .slide-menu__item:nth-child(6) {
+    order: 1;
+  }
+  .header__repair {
+    margin-left: 26px;
+  }
+  .header__burger {
+    margin-right: 40px;
+  }
+
+  
+}
+
+@media screen and (min-width: 1120px) {
+  .header__burger {
+    display: none;
+  }
+  /*.header__checkstatus::before {
+    content: "Статус ремонта";
+  }
+  .header__repair::before {
+    content: "Оставить заявку";
+  }
+  .header__checkstatus::before,
+  .header__repair::before {
+    font-weight: 500;
+    position: relative;
+    right: 63px;
+  }*/
+  .header__profile {
+    display: none;
+  }
+  .header__chat {
+    display: none;
+  }
+  .header__call {
+    display: none;
+  }
+  .header__logo {
+    display: none;
+  }
+
+  .header {
+    justify-content: end;
+    position: absolute;
+    bottom: 100%;
+  }
+  /*.header * {
+    position: absolute;
+    top: 115px;
+    left: 60%;
+  }*/
+
+  .info-block__text p {
+    width: 490px;
+  }
+  .info-block__image {
+    width: 530px;
+  }
+
+  .slide-menu {
+    flex-wrap: wrap;
+    overflow: visible;
+  }
+  .slide-menu__item:nth-child(3) {
+    border: 2px solid #b8ffec;
+    border-radius: 6px;
+    order: -1;
+  }
+  .slide-menu__item:nth-child(4) {
+    order: 0;
+  }
+  .slide-menu__item:nth-child(5) {
+    order: 0;
+  }
+  .slide-menu__item:nth-child(6) {
+    order: 0;
+  }
+  .slide-menu__item:nth-child(2) {
+    display: none;
+  }
+  .slide-menu__item--selected {
+    border: none;
+    border-radius: 0;
+  }
+  .row-with-buttons span,
+  .row-with-buttons button {
+    display: block;
+  }
+  .line-right::after {
+    display: none;
+  }
+  body {
+    box-shadow: 1px 0px 3px rgba(0, 0, 0, 0.25);
+  }
+}
