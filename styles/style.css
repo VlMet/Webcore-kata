@@ -1,6 +1,5 @@
 @import url("default.css");
 @import url("presset.css");
-@import url("fonts.css");
 @import url("debug.css");
 
 .header {
@@ -13,26 +12,16 @@
   border-bottom: 1px solid #d9fff5;
 }
 
-.header__burger {
-  background-image: url("../images/burger.svg");
-}
-.header__checkstatus {
-  background-image: url("../images/checkstatus.svg");
-}
 .header__repair {
-  background-image: url("../images/repair.svg");
   margin-left: auto;
 }
 .header__profile {
-  background-image: url("../images/profile.svg");
   display: none;
 }
 .header__chat {
-  background-image: url("../images/chat.svg");
   display: none;
 }
 .header__call {
-  background-image: url("../images/call.svg");
   margin-left: auto;
   display: none;
 }
@@ -45,12 +34,12 @@
   gap: 24px;
 }
 
-.title::before {
+/*.title::before {
   content: "";
   border-right: 4px solid #41f6d7;
   border-radius: 0 4px 4px 0px;
   margin-right: 12px;
-}
+}*/
 .title {
   font-size: 28px;
   line-height: 40px;
@@ -149,8 +138,6 @@
   .header__burger {
     margin-right: 40px;
   }
-
-  
 }
 
 @media screen and (min-width: 1120px) {
